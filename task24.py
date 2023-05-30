@@ -23,12 +23,12 @@ for i in range(count_bush):
     data_1.append(randint(0, 10))
 
 for i in range(len(data_1)-2):
-    sum_collection = data_1[i]+data_1[i+1]+data_1[i+2]
+    sum_collection = data_1[i-1]+data_1[i]+data_1[i+1]
     if sum_collection > max_sum:
         max_sum = sum_collection
-        bush_1 = i + 1
-        bush_2 = i + 2
-        bush_3 = i + 3
+        bush_1 = i - 1
+        bush_2 = i
+        bush_3 = i + 1
 print(f'количество ягод на каждом кусте:{data_1}')
 print()
-print(f'номера кустов: {bush_1}+{bush_2}+{bush_3}={sum_collection}')
+print(f'номера кустов: {bush_1}+{bush_2}+{bush_3}={max_sum}')
